@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>List of Users</title>
+    
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Users List</h1>
+    <br />
+    <table>
+      
+             <th>First Name</th>
+             <th>Last Name</th>
+             <th>Email</th>
+             <th>         
+             </th>
+             <th></th>
+        <% for(var i=0; i < ft.length; i++) { %>
+           <tr>
+             
+             <td><%= ft[i].first_name %></td>
+             <td><%= ft[i].last_name %></td>
+             <td><%= ft[i].email %></td>
+             <td><a class="delete" href="/todelete/<%= ft[i].id %>">Delete</a></td>
+             <td><a class="edit" href="/edit/<%= ft[i].id %>">Edit</a></td>
+             <% } %>
+             
+           </tr>
+        
+        </table>
+        <br />
+        <a class="add" href="/add">Add New User</a>
+        <br />
+      </div>  
+        
+        
+</body>
+</html>
